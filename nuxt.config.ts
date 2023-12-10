@@ -3,6 +3,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@nuxt/content',
-    '@nuxt/image@rc'
+    '@nuxt/image'
   ],
 })
