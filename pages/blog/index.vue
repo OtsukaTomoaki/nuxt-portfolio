@@ -1,16 +1,16 @@
 <template>
-  <div>
-    <div>
+  <div class="wrapper">
+    <div class="container">
       <h1>Blog</h1>
       <p>エンジニアの日常生活をお届けします</p>
-      <div v-for="blog in data" :key="blog.id">
-        <div>
+      <div v-for="blog in data" :key="blog.id" class="blogCard">
+        <div class="textContainer">
           <h3>{{ blog.title }}</h3>
           <p>{{ blog.excerpt }}</p>
           <p>{{ blog.date  }}</p>
           <NuxtLink :to="blog._path">ReadMore</NuxtLink>
         </div>
-        <div>
+        <div class="blogImg">
           <nuxt-img :src="blog.image" alt="blog-image" format="webp" />
         </div>
       </div>
