@@ -22,8 +22,10 @@
 <script setup>
 const blogPerPage = 5
 
+const currentPage = Number(useRoute().params.pagination)
+
 const { data } = await useAsyncData("blogQuery", () => {
-  return queryContent("/blog").sort({ id: -1 }).limit(blogPerPage).find()
+  return queryContent("/blog").sort({ id: -1 }).limit(blogPerPage).skip((currentPage - 1) * blogPerPage).find()
 })
 
 const allBlogs = await queryContent("/blog").find()
