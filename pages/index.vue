@@ -33,7 +33,7 @@
 
 <script setup>
 useHead({
-  title: "Abe Hiroki Official Site",
+  title: "Tomoaki Otsuka Official Site",
   meta: [
       { name: "description", content: "Abe Hirokiのポートフォリオサイトです" }
   ],
